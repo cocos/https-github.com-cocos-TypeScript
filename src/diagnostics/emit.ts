@@ -1,6 +1,6 @@
 import type { PluginContext } from 'rollup';
-import type typescript from 'typescript';
-import type { Diagnostic, DiagnosticReporter } from 'typescript';
+import type typescript from '@mycocos/typescript';
+import type { Diagnostic, DiagnosticReporter } from '@mycocos/typescript';
 
 import type { DiagnosticsHost } from './host';
 import diagnosticToWarning from './toWarning';

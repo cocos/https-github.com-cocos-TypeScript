@@ -1,5 +1,5 @@
-import type typescript from 'typescript';
-import type { Diagnostic, FormatDiagnosticsHost } from 'typescript';
+import type typescript from '@mycocos/typescript';
+import type { Diagnostic, FormatDiagnosticsHost } from '@mycocos/typescript';
 
 // TODO Drop rollup@2 compatibility and use native RollupLog type instead
 interface RollupLog {
@@ -27,7 +27,7 @@ export default function diagnosticToWarning(
   // Build a Rollup warning object from the diagnostics object.
   const warning: RollupLog = {
     pluginCode,
-    message: `@rollup/plugin-typescript ${pluginCode}: ${message}`
+    message: `@mycocos/rollup-plugin-typescript ${pluginCode}: ${message}`
   };
 
   if (diagnostic.file) {

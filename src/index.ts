@@ -3,7 +3,7 @@ import * as path from 'path';
 import { createFilter } from '@rollup/pluginutils';
 
 import type { Plugin, SourceDescription } from 'rollup';
-import type { Watch } from 'typescript';
+import type { Watch } from '@mycocos/typescript';
 
 import type { RollupTypescriptOptions } from '../types';
 
@@ -53,7 +53,7 @@ export default function typescript(options: RollupTypescriptOptions = {}): Plugi
   let program: Watch<unknown> | null = null;
 
   return {
-    name: 'typescript',
+    name: '@mycocos/typescript',
 
     buildStart(rollupOptions) {
       emitParsedOptionsErrors(ts, this, parsedOptions);

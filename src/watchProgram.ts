@@ -1,5 +1,5 @@
 import type { PluginContext } from 'rollup';
-import typescript from 'typescript';
+import typescript from '@mycocos/typescript';
 import type {
   CustomTransformers,
   Diagnostic,
@@ -9,7 +9,7 @@ import type {
   WatchCompilerHostOfFilesAndCompilerOptions,
   WatchStatusReporter,
   WriteFileCallback
-} from 'typescript';
+} from '@mycocos/typescript';
 
 import type { CustomTransformerFactories } from '../types';
 

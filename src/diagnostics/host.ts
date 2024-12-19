@@ -1,5 +1,5 @@
-import type typescript from 'typescript';
-import type { CompilerOptions, FormatDiagnosticsHost } from 'typescript';
+import type typescript from '@mycocos/typescript';
+import type { CompilerOptions, FormatDiagnosticsHost } from '@mycocos/typescript';
 
 export interface DiagnosticsHost extends FormatDiagnosticsHost {
   getCompilationSettings(): CompilerOptions;

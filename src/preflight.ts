@@ -1,5 +1,5 @@
 import type { PluginContext } from 'rollup';
-import typescript from 'typescript';
+import typescript from '@mycocos/typescript';
 
 import type { TypeScriptConfig } from './options/tsconfig';
 // import { resolveIdAsync } from './tslib';
@@ -12,7 +12,7 @@ interface PreflightOptions {
   tslib: any;
 }
 
-const pluginName = '@rollup/plugin-typescript';
+const pluginName = '@mycocos/rollup-plugin-@mycocos/typescript';
 const moduleErrorMessage = `
 ${pluginName}: Rollup requires that TypeScript produces ES Modules. Unfortunately your configuration specifies a
  "module" other than "esnext". Unless you know what you're doing, please change "module" to "esnext"

@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-import type _typescript from 'typescript';
+import type _typescript from '@mycocos/typescript';
 
 import type { FilterPattern } from '@rollup/pluginutils';
 import type { Plugin } from 'rollup';

@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { resolve } from 'path';
 
-import type typescript from 'typescript';
+import type typescript from '@mycocos/typescript';
 
 import type { CompilerOptions, PartialCompilerOptions } from './interfaces';
 
@@ -58,7 +58,7 @@ export function normalizeCompilerOptions(ts: typeof typescript, compilerOptions:
       // Invalid module type
       const moduleType = ts.ModuleKind[compilerOptions.module];
       throw new Error(
-        `@rollup/plugin-typescript: The module kind should be 'ES2015', 'ESNext', 'node16' or 'nodenext', found: '${moduleType}'`
+        `@mycocos/rollup-plugin-typescript: The module kind should be 'ES2015', 'ESNext', 'node16' or 'nodenext', found: '${moduleType}'`
       );
     }
     default:

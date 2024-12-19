@@ -4,7 +4,7 @@ const fs = require('fs');
 const commonjs = require('@rollup/plugin-commonjs');
 const test = require('ava');
 const { rollup, watch } = require('rollup');
-const ts = require('typescript');
+const ts = require('@mycocos/typescript');
 
 const { evaluateBundle, getCode, getFiles, onwarn } = require('../util/test');
 
@@ -313,16 +313,16 @@ test.serial('warns for invalid module types', async (t) => {
 
   const warning = warnings[0];
   t.is(warning.code, 'PLUGIN_WARNING');
-  t.is(warning.plugin, 'typescript');
+  t.is(warning.plugin, '@mycocos/typescript');
   t.is(warning.pluginCode, 'TS6046');
-  t.is(warning.message, `[plugin typescript] @rollup/plugin-typescript TS6046: Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext'.`);
+  t.is(warning.message, `[plugin @mycocos/typescript] @mycocos/rollup-plugin-typescript TS6046: Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext'.`);
 
   // t.deepEqual(warnings, [
   //   {
   //     code: 'PLUGIN_WARNING',
   //     plugin: 'typescript',
   //     pluginCode: 'TS6046',
-  //     message: `@rollup/plugin-typescript TS6046: Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext'.`
+  //     message: `@mycocos/rollup-plugin-typescript TS6046: Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext'.`
   //   }
   // ]);
 });
@@ -404,7 +404,7 @@ test.serial('transpiles ES6 features to ES5 with source maps', async (t) => {
 //     })
 //   );
 
-//   t.is(caughtError.message, '@rollup/plugin-typescript TS1110: Type expected.');
+//   t.is(caughtError.message, '@mycocos/rollup-plugin-typescript TS1110: Type expected.');
 //   t.is(caughtError.pluginCode, 'TS1110');
 // });
 
@@ -424,9 +424,9 @@ test.serial('ignore type errors if noEmitOnError is false', async (t) => {
   t.is(warnings.length, 2);
 
   t.is(warnings[0].code, 'PLUGIN_WARNING');
-  t.is(warnings[0].plugin, 'typescript');
+  t.is(warnings[0].plugin, '@mycocos/typescript');
   t.is(warnings[0].pluginCode, 'TS1110');
-  t.is(warnings[0].message, '[plugin typescript] fixtures/syntax-error/missing-type.ts (1:8): @rollup/plugin-typescript TS1110: Type expected.');
+  t.is(warnings[0].message, '[plugin @mycocos/typescript] fixtures/syntax-error/missing-type.ts (1:8): @mycocos/rollup-plugin-typescript TS1110: Type expected.');
 
   t.is(warnings[0].loc.line, 1);
   t.is(warnings[0].loc.column, 8);
@@ -634,22 +634,22 @@ test.serial('should throw on bad options', async (t) => {
         }
       }),
     {
-      message: "[plugin typescript] @rollup/plugin-typescript: Couldn't process compiler options"
+      message: "[plugin @mycocos/typescript] @mycocos/rollup-plugin-typescript: Couldn't process compiler options"
     }
   );
 
   const warning = warnings[0];
   t.is(warning.code, 'PLUGIN_WARNING');
-  t.is(warning.plugin, 'typescript');
+  t.is(warning.plugin, '@mycocos/typescript');
   t.is(warning.pluginCode, 'TS5023');
-  t.is(warning.message, "[plugin typescript] @rollup/plugin-typescript TS5023: Unknown compiler option 'foo'.");
+  t.is(warning.message, "[plugin @mycocos/typescript] @mycocos/rollup-plugin-typescript TS5023: Unknown compiler option 'foo'.");
 
   // t.deepEqual(warnings, [
   //   {
   //     code: 'PLUGIN_WARNING',
   //     plugin: 'typescript',
   //     pluginCode: 'TS5023',
-  //     message: `[plugin typescript] @rollup/plugin-typescript TS5023: Unknown compiler option 'foo'.`
+  //     message: `[plugin @mycocos/typescript] @mycocos/rollup-plugin-typescript TS5023: Unknown compiler option 'foo'.`
   //   }
   // ]);
 });

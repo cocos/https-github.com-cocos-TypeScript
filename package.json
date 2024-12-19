@@ -1,6 +1,6 @@
 {
   "name": "@mycocos/rollup-plugin-typescript",
-  "version": "12.1.2-cocos.0",
+  "version": "12.1.2-cocos.1",
   "publishConfig": {
     "access": "public"
   },

@@ -4,7 +4,7 @@ import test from 'ava';
 
 import { rollup } from 'rollup';
 
-import typescript from 'current-package';
+import typescript from '..';
 
 import { getCode, onwarn } from '../util/test.js';
 

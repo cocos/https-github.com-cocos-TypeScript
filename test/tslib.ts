@@ -6,7 +6,7 @@ import { rollup } from 'rollup';
 
 import typescript from '..';
 
-import { evaluateBundle, getCode, onwarn } from '../../../util/test.js';
+import { evaluateBundle, getCode, onwarn } from '../util/test.js';
 
 test.beforeEach(() => process.chdir(__dirname));
 

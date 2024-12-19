@@ -6,7 +6,7 @@ import { rollup } from 'rollup';
 
 import typescript from 'current-package';
 
-import { getCode, onwarn } from '../../../util/test.js';
+import { getCode, onwarn } from '../util/test.js';
 
 test.beforeEach(() => process.chdir(fileURLToPath(new URL('.', import.meta.url))));
 

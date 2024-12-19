@@ -6,7 +6,7 @@ const test = require('ava');
 const { rollup, watch } = require('rollup');
 const ts = require('typescript');
 
-const { evaluateBundle, getCode, getFiles, onwarn } = require('../../../util/test');
+const { evaluateBundle, getCode, getFiles, onwarn } = require('../util/test');
 
 const typescript = require('..');
 

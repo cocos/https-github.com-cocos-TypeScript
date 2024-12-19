@@ -4,7 +4,7 @@ import { rollup } from 'rollup';
 
 import typescript from '..';
 
-import { getCode } from '../../../util/test';
+import { getCode } from '../util/test';
 
 test.beforeEach(() => process.chdir(__dirname));
 

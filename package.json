@@ -1,6 +1,6 @@
 {
   "name": "@mycocos/rollup-plugin-typescript",
-  "version": "12.1.2-cocos.1",
+  "version": "12.1.2-cocos.2",
   "publishConfig": {
     "access": "public"
   },
@@ -65,7 +65,7 @@
   "dependencies": {
     "@rollup/pluginutils": "^5.1.0",
     "resolve": "^1.22.1",
-    "@mycocos/typescript": "4.9.5-cocos.0"
+    "@mycocos/typescript": "^4.9.5-cocos.1"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^1.0.0",

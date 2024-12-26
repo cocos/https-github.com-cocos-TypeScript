@@ -2,10 +2,10 @@ import * as path from 'path';
 
 import { promises as fs } from 'fs';
 
-import type typescript from '@mycocos/typescript';
+import type typescript from '@cocos/typescript';
 
 import type { OutputOptions, PluginContext, SourceDescription } from 'rollup';
-import type { ParsedCommandLine } from '@mycocos/typescript';
+import type { ParsedCommandLine } from '@cocos/typescript';
 
 import type TSCache from './tscache';
 
@@ -114,7 +114,7 @@ export async function emitFile(
   // legal paths do not start with . nor .. : https://github.com/rollup/rollup/issues/3507#issuecomment-616495912
   if (relativePath.startsWith('..')) {
     if (outputToFilesystem == null) {
-      context.warn(`@mycocos/rollup-plugin-typescript: outputToFilesystem option is defaulting to true.`);
+      context.warn(`@cocos/rollup-plugin-typescript: outputToFilesystem option is defaulting to true.`);
     }
     if (outputToFilesystem !== false) {
       await fs.mkdir(path.dirname(normalizedFilePath), { recursive: true });

@@ -1,4 +1,4 @@
-import type { BuilderProgram, CustomTransformers, Program, TypeChecker } from '@mycocos/typescript';
+import type { BuilderProgram, CustomTransformers, Program, TypeChecker } from '@cocos/typescript';
 
 import type { CustomTransformerFactories, TransformerStage, TransformerFactory } from '../types';
 /**

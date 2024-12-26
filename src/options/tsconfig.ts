@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import { dirname, resolve } from 'path';
 
 import type { PluginContext } from 'rollup';
-import typescript from '@mycocos/typescript';
+import typescript from '@cocos/typescript';
 import type {
   Diagnostic,
   ExtendedConfigCacheEntry,
@@ -12,7 +12,7 @@ import type {
   TypeAcquisition,
   WatchDirectoryFlags,
   WatchOptions
-} from '@mycocos/typescript';
+} from '@cocos/typescript';
 
 import type { RollupTypescriptOptions } from '../../types';
 import diagnosticToWarning from '../diagnostics/toWarning';
@@ -216,6 +216,6 @@ export function emitParsedOptionsErrors(
   if (parsedOptions.errors.length > 0) {
     parsedOptions.errors.forEach((error) => context.warn(diagnosticToWarning(ts, null, error)));
 
-    context.error(`@mycocos/rollup-plugin-typescript: Couldn't process compiler options`);
+    context.error(`@cocos/rollup-plugin-typescript: Couldn't process compiler options`);
   }
 }

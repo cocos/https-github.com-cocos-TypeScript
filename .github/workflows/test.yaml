@@ -6,19 +6,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, macos-latest]
+        os: [windows-latest, macos-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '18.17.0'
+          node-version: '18.20.5'
 
-      - run: |
+      - name: Build & Test
+        run: |
           node --version
           npm --version
           npm install -g pnpm
           pnpm --version
           npm ci
-          npm run build
           npm test

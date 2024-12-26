@@ -12,13 +12,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '18.17.0'
+          node-version: '18.20.5'
 
-      - run: |
+      - name: Build & Test
+        run: |
           npm install -g pnpm
           pnpm --version
           npm ci
-          npm run build
           npm test
 
       - uses: JS-DevTools/npm-publish@4b07b26a2f6e0a51846e1870223e545bae91c552

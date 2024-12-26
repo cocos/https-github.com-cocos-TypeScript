@@ -64,6 +64,7 @@
   "dependencies": {
     "@cocos/typescript": "^4.9.5-cocos.2",
     "@rollup/pluginutils": "^5.1.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.28.1",
     "resolve": "^1.22.1"
   },
   "devDependencies": {

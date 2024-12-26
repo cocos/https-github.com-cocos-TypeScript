@@ -14,11 +14,12 @@ jobs:
         with:
           node-version: '18.17.0'
 
-      - run: |
+      - name: Build & Test
+        run: |
+          rm package-lock.json
           node --version
           npm --version
           npm install -g pnpm
           pnpm --version
-          npm ci
-          npm run build
+          npm install
           npm test

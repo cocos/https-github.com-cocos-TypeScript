@@ -1583,7 +1583,7 @@ test.serial('noForceEmit option defers to tsconfig.json for emitDeclarationOnly'
   );
   t.is(warnings.length, 0);
   // test that NO transpilation happened
-  const originalCode = fs.readFileSync(path.join(__dirname, input), 'utf8');
+  const originalCode = fs.readFileSync(path.join(__dirname, input), 'utf8').replaceAll('\r\n', '\n');
   t.is(output[0].code, originalCode);
 });
 
@@ -1613,7 +1613,7 @@ test.serial('noForceEmit option defers to tsconfig.json for noEmit', async (t) =
   );
   t.is(warnings.length, 0);
   // test that NO transpilation happened
-  const originalCode = fs.readFileSync(path.join(__dirname, input), 'utf8');
+  const originalCode = fs.readFileSync(path.join(__dirname, input), 'utf8').replaceAll('\r\n', '\n');
   t.is(output[0].code, originalCode);
 });
 

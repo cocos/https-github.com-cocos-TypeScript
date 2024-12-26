@@ -1,4 +1,4 @@
-import type { CompilerOptions } from '@mycocos/typescript';
+import type { CompilerOptions } from '@cocos/typescript';
 
 import type { PartialCompilerOptions } from '../../types';
 
@@ -6,7 +6,7 @@ export type { EnumCompilerOptions, JsonCompilerOptions } from '../../types';
 export { PartialCompilerOptions };
 
 /** Typescript compiler options */
-export type { CompilerOptions } from '@mycocos/typescript';
+export type { CompilerOptions } from '@cocos/typescript';
 
 export const DEFAULT_COMPILER_OPTIONS: PartialCompilerOptions = {
   module: 'esnext',

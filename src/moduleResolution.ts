@@ -1,10 +1,10 @@
-import type typescript from '@mycocos/typescript';
+import type typescript from '@cocos/typescript';
 import type {
   ModuleResolutionHost,
   ResolvedModuleFull,
   ResolvedProjectReference,
   ModuleKind
-} from '@mycocos/typescript';
+} from '@cocos/typescript';
 import type { CreateFilter } from '@rollup/pluginutils';
 
 import type { DiagnosticsHost } from './diagnostics/host';

@@ -7,6 +7,15 @@
 [![size][size]][size-url]
 [![libera manifesto](https://img.shields.io/badge/libera-manifesto-lightgrey.svg)](https://liberamanifesto.com)
 
+This is a typescript rollup plugin forked from https://github.com/rollup/plugins/tree/master/packages/typescript .
+
+We did some changes:
+
+- Depends on a modified version of `typescript` npm package (`@cocos/typescript`)
+- Renames the current package to `@cocos/rollup-plugin-typescript`
+
+The original README is below:
+
 # @rollup/plugin-typescript
 
 🍣 A Rollup plugin for seamless integration between Rollup and Typescript.

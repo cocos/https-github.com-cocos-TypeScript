@@ -1,4 +1,4 @@
-import defaultTs from '@mycocos/typescript';
+import defaultTs from '@cocos/typescript';
 
 import type { RollupTypescriptOptions, PartialCompilerOptions } from '../../types';
 import { getTsLibPath } from '../tslib';

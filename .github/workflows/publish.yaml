@@ -16,10 +16,9 @@ jobs:
 
       - name: Build & Test
         run: |
-          rm package-lock.json
           npm install -g pnpm
           pnpm --version
-          npm install
+          npm ci
           npm test
 
       - uses: JS-DevTools/npm-publish@4b07b26a2f6e0a51846e1870223e545bae91c552

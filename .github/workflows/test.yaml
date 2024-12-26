@@ -16,10 +16,9 @@ jobs:
 
       - name: Build & Test
         run: |
-          rm package-lock.json
           node --version
           npm --version
           npm install -g pnpm
           pnpm --version
-          npm install
+          npm ci
           npm test
